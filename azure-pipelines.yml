@@ -6,16 +6,17 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python37:
-      python.version: '3.7'
-    Python38:
-      python.version: '3.8'
+    linux:
+      imageName: "ubuntu-latest"
+    mac:
+      imageName: "macOS-latest"
+    windows:
+      imageName: "windows-latest"
     Python39:
       python.version: '3.9'
+  maxParallel: 3
 
 steps:
 - task: UsePythonVersion@0
