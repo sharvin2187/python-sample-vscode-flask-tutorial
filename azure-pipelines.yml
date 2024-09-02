@@ -14,6 +14,7 @@ strategy:
     Python310ANDWindows:
       python.version: '3.10'
       imageName: 'windows-latest'
+  maxParallel: 2
 pool:
   vmImage: $(imageName)
 
