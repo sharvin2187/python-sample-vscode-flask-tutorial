@@ -5,6 +5,8 @@
 
 trigger:
 - main
+pr:
+- .*
 
 strategy:
   matrix:
